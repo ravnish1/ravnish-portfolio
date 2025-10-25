@@ -1,12 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>under construction</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Ravnish Kumar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Subtle Background -->
+    <div class="bg-overlay"></div>
+
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li>
+            <a href="../index.html" class="home-link">
+              <i class="fa-solid fa-house"></i> Home
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="navbar">
+          <li>
+            <a
+              href="../resume/RAVNISH-KUMAR-RESUME.pdf"
+              target="_blank"
+              download
+            >
+              <i class="fa-solid fa-file-lines"></i> Resume
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-briefcase"></i> Projects
+            </a>
+          </li>
+          <li>
+            <a href="../contactme/index.html">
+              <i class="fa-solid fa-envelope"></i> Contact Me
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ravnish-kumar/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ravnish1" target="_blank">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </li>
+          <li>
+            <a href="../blogs/index.html">
+              <i class="fa-solid fa-blog"></i> Blog
+            </a>
+          </li>
+          <li>
+            <a href="../skills/index.html">
+              <i class="fa-solid fa-list-check"></i>Skills
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Projects Section -->
+    <main class="projects-main">
+      <div class="projects-container">
+        <!-- Projects Header -->
+        <div class="projects-header">
+          <h1><i class="fas fa-briefcase"></i> My Projects</h1>
+          <p>
+            Showcasing innovative solutions and technical expertise through
+            hands-on development
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="development-status">
+                <i class="fas fa-hammer"></i>
+                <span>In Development</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="development-status">
+                <i class="fas fa-hammer"></i>
+                <span>In Development</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="development-status">
+                <i class="fas fa-hammer"></i>
+                <span>In Development</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 4 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="development-status">
+                <i class="fas fa-hammer"></i>
+                <span>In Development</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- GitHub Profile Link -->
+        <div class="github-profile">
+          <h2>Explore More on GitHub</h2>
+          <p>Check out my repositories and contributions</p>
+          <a
+            href="https://github.com/ravnish1"
+            target="_blank"
+            class="github-follow-btn"
+          >
+            <i class="fab fa-github"></i>
+            <span>View GitHub Profile</span>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Add hover effects and animations
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectCards = document.querySelectorAll(".project-card");
+
+        projectCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px) scale(1.02)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
