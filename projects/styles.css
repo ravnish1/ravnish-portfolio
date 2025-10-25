@@ -1,0 +1,452 @@
+/* Projects Page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #020c1b;
+    color: #ccd6f6;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Background */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(100, 255, 218, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(136, 146, 176, 0.03) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* Navigation */
+header {
+    width: min(1200px, 90vw);
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccd6f6;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #64ffda;
+    border-color: #64ffda;
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* Main Projects Section */
+.projects-main {
+    padding: 100px 20px 50px;
+    min-height: 100vh;
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Projects Header */
+.projects-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: slideUp 0.8s ease-out;
+}
+
+.projects-header h1 {
+    color: #ccd6f6;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.projects-header h1 i {
+    color: #64ffda;
+    font-size: 2.5rem;
+}
+
+.projects-header p {
+    color: #8892b0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: slideUp 0.8s ease-out;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    border-color: #64ffda;
+}
+
+/* Project Card Header */
+.project-card-header {
+    padding: 20px 25px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.project-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64ffda;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.project-status i {
+    font-size: 1.2rem;
+}
+
+.project-tech {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #8892b0;
+    font-size: 0.85rem;
+}
+
+/* Project Content */
+.project-content {
+    padding: 60px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.development-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #64ffda;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.development-status i {
+    font-size: 2.5rem;
+    opacity: 0.7;
+}
+
+/* Project Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+/* Project Footer */
+.project-footer {
+    padding: 20px 25px 25px;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.coming-soon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .coming-soon-btn {
+    background: rgba(100, 255, 218, 0.2);
+    border-color: #64ffda;
+}
+
+/* GitHub Profile Section */
+.github-profile {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    animation: slideUp 0.8s ease-out;
+}
+
+.github-profile h2 {
+    color: #ccd6f6;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.github-profile p {
+    color: #8892b0;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.github-follow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    color: #64ffda;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #64ffda;
+}
+
+.github-follow-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(100, 255, 218, 0.3);
+    background: rgba(100, 255, 218, 0.1);
+}
+
+.github-follow-btn i:first-child {
+    font-size: 1.3rem;
+}
+
+.github-follow-btn i:last-child {
+    font-size: 1rem;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-main {
+        padding: 80px 3% 50px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .navbar {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .navbar li a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    
+    .projects-main {
+        padding: 60px 15px 30px;
+    }
+    
+    .projects-header h1 {
+        font-size: 2.2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .projects-header h1 i {
+        font-size: 2rem;
+    }
+    
+    .projects-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        margin: 0;
+    }
+    
+    .github-profile {
+        padding: 30px 20px;
+        margin: 0;
+    }
+    
+    .github-profile h2 {
+        font-size: 1.6rem;
+    }
+    
+    .github-follow-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-header {
+        margin-bottom: 40px;
+    }
+    
+    .projects-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .projects-header p {
+        font-size: 0.9rem;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-content p {
+        font-size: 0.9rem;
+    }
+    
+    .project-tags {
+        gap: 6px;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+    
+    .project-footer {
+        padding: 15px 20px 20px;
+    }
+    
+    .coming-soon-btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+    
+    .github-profile {
+        padding: 25px 15px;
+    }
+    
+    .github-profile h2 {
+        font-size: 1.4rem;
+    }
+    
+    .github-profile p {
+        font-size: 0.9rem;
+    }
+    
+    .github-follow-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .projects-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .project-content {
+        padding: 15px;
+    }
+    
+    .github-profile {
+        padding: 20px 10px;
+    }
+}
